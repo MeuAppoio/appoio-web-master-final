@@ -14,7 +14,7 @@ export default {}
 
         <div class="mt-4 pt-3 border-top text-left">
           <p class="text-muted mb-2">
-            Hi I'm Shreyu. I am user experience and user interface designer. I
+            Hi I'm Meu Appoio. I am user experience and user interface designer. I
             have been working on UI & UX since last 10 years.
           </p>
 

@@ -22,7 +22,7 @@ export default {
 			title: 'Project Tasks Board',
 			items: [
 				{
-					text: 'Shreyu',
+					text: 'Meu Appoio',
 					href: '/',
 				},
 				{
@@ -72,7 +72,7 @@ export default {
 									toggle-class="font-weight-bold p-0 align-middle"
 								>
 									<template v-slot:button-content>
-										Shreyu Design
+										Meu Appoio Design
 										<i class="uil uil-angle-down font-size-16 align-middle"></i>
 									</template>
 									<a class="dropdown-item" href="#">
@@ -80,7 +80,7 @@ export default {
 											class="icon-dual icon-xs mr-2 align-middle"
 											type="hard-drive"
 										></feather
-										>Shreyu Design
+										>Meu Appoio Design
 									</a>
 									<a class="dropdown-item" href="#">
 										<feather
@@ -95,14 +95,14 @@ export default {
 											class="icon-dual icon-xs mr-2 align-middle"
 											type="folder-plus"
 										></feather
-										>Shreyu Angular
+										>Meu Appoio Angular
 									</a>
 									<a class="dropdown-item" href="#">
 										<feather
 											class="icon-dual icon-xs mr-2 align-middle"
 											type="folder-plus"
 										></feather
-										>Shreyu React
+										>Meu Appoio React
 									</a>
 								</b-dropdown>
 							</div>

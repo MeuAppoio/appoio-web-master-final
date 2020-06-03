@@ -38,7 +38,7 @@ Vue.component('apexchart', VueApexCharts)
 
 // Uncomment this if you are having api served through other url or do not want to use fake backend
 Vue.prototype.$http = require('axios')
-Vue.prototype.$http.defaults.baseURL  = 'http://localhost:3333'
+Vue.prototype.$http.defaults.baseURL = 'http://192.241.141.209:3333'
 
 const app = new Vue({
   router,

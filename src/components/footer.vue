@@ -4,9 +4,9 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          2019 &copy; Shreyu. All Rights Reserved. Crafted with
-          <i class="uil uil-heart text-danger font-size-12"></i> by
-          <a href="https://coderthemes.com" target="_blank">Coderthemes</a>
+          2020 &copy; Meu Appoio. Todos os direitos reservados. Criado com
+          <i class="uil uil-heart text-succes font-size-12"></i> por
+          <a href="https://incoder.com.br" target="_blank">inCoder Desenvolvimento Web</a>
         </div>
       </div>
     </div>

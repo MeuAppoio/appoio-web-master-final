@@ -16,7 +16,7 @@ export default {
       title: 'Advanced Forms',
       items: [
         {
-          text: 'Shreyu',
+          text: 'Meu Appoio',
           href: '/',
         },
         {

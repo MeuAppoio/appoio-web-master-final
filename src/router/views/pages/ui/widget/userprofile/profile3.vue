@@ -8,7 +8,7 @@
           alt="shreyu"
         />
         <div class="media-body">
-          <h5 class="mt-2 mb-0">Shreyu N</h5>
+          <h5 class="mt-2 mb-0">Meu Appoio N</h5>
           <h6 class="text-muted font-weight-normal mt-1 mb-4">New York, USA</h6>
         </div>
         <b-dropdown
@@ -56,7 +56,7 @@
 
       <div class="mt-1 pt-2 border-top text-left">
         <p class="text-muted mb-2">
-          Hi I'm Shreyu. I am foodie and love to eat different cuisine!
+          Hi I'm Meu Appoio. I am foodie and love to eat different cuisine!
         </p>
       </div>
 

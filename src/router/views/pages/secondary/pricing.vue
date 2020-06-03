@@ -16,7 +16,7 @@ export default {
 			title: 'Pricing',
 			items: [
 				{
-					text: 'Shreyu',
+					text: 'Meu Appoio',
 					href: '/',
 				},
 				{

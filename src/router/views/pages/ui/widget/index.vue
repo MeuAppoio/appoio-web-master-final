@@ -49,7 +49,7 @@ export default {
 			title: 'Widgets',
 			items: [
 				{
-					text: 'Shreyu',
+					text: 'Meu Appoio',
 					href: '/',
 				},
 				{
@@ -167,7 +167,7 @@ export default {
 				{
 					image: require('@assets/images/users/avatar-7.jpg'),
 					text: 'Senior Sales Guy',
-					name: 'Shreyu N',
+					name: 'Meu Appoio N',
 				},
 				{
 					image: require('@assets/images/users/avatar-9.jpg'),
@@ -223,7 +223,7 @@ export default {
 					id: 2,
 				},
 				{
-					title: 'Write a release note for Shreyu',
+					title: 'Write a release note for Meu Appoio',
 					text: 'Due on 22 Aug, 2019',
 					id: 3,
 				},
@@ -249,7 +249,7 @@ export default {
 				{
 					id: 2,
 					image: require('@assets/images/users/avatar-7.jpg'),
-					name: 'Shreyu',
+					name: 'Meu Appoio',
 					message: 'Hi, How are you? What about our next meeting?',
 					time: '10:01',
 				},
@@ -263,7 +263,7 @@ export default {
 				{
 					id: 4,
 					image: require('@assets/images/users/avatar-7.jpg'),
-					name: 'Shreyu',
+					name: 'Meu Appoio',
 					message: 'Awesome! let me know if we can talk in 20 min',
 					time: '10:02',
 				},

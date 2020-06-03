@@ -47,7 +47,7 @@ export default {
 			title: 'Bootstrap UI',
 			items: [
 				{
-					text: 'Shreyu',
+					text: 'Meu Appoio',
 					href: '/',
 				},
 				{

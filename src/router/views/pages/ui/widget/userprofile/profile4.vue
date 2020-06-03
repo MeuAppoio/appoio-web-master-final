@@ -11,7 +11,7 @@
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title mb-1">Shreyu N</h5>
+            <h5 class="card-title mb-1">Meu Appoio N</h5>
             <h6 class="text-muted font-weight-normal mt-0 mb-3"
               >New York, USA</h6
             >
@@ -43,7 +43,7 @@
             alt="shreyu"
           />
           <div class="media-body">
-            <h5 class="mt-1 mb-0">Shreyu N</h5>
+            <h5 class="mt-1 mb-0">Meu Appoio N</h5>
             <h6 class="font-weight-normal mt-1 mb-1">
               <a href>@shreyu</a>
             </h6>

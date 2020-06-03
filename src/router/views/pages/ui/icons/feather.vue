@@ -14,7 +14,7 @@ export default {
       title: 'Feather Icons',
       items: [
         {
-          text: 'Shreyu',
+          text: 'Meu Appoio',
           href: '/',
         },
         {

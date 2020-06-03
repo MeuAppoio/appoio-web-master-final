@@ -201,7 +201,7 @@ const ordersData = [
   {
     id: '#98751',
     product: 'Lightweight Jacket',
-    name: 'Shreyu N',
+    name: 'Meu Appoio N',
     price: '$49.49',
     status: 'Delivered',
   },

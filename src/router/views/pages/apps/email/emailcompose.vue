@@ -21,7 +21,7 @@ export default {
       title: 'Compose Email',
       items: [
         {
-          text: 'Shreyu',
+          text: 'Meu Appoio',
           href: '/',
         },
         {

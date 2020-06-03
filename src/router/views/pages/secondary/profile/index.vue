@@ -38,7 +38,7 @@ export default {
 			title: 'Profile',
 			items: [
 				{
-					text: 'Shreyu',
+					text: 'Meu Appoio',
 					href: '/',
 				},
 				{

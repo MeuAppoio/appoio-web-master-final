@@ -16,7 +16,7 @@ export default {
 			title: 'File Upload',
 			items: [
 				{
-					text: 'Shreyu',
+					text: 'Meu Appoio',
 					href: '/',
 				},
 				{
