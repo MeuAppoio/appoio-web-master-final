@@ -32,7 +32,7 @@ export default {
 
         <div class="progress mb-4" style="height: 14px;">
           <div
-            class="progress-bar bg-success"
+            class="progress-bar bg-warning"
             role="progressbar"
             style="width: 60%;"
             aria-valuenow="60"
@@ -46,8 +46,6 @@ export default {
           </div>
         </div>
 
-        <button type="button" class="btn btn-primary btn-sm mr-1">Seguir</button>
-        <button type="button" class="btn btn-white btn-sm ml-1">Mensagem</button>
       </div>
 
       <!-- profile  -->
