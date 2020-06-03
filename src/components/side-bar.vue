@@ -93,12 +93,12 @@ export default {
 	<div class="left-side-menu">
 		<div class="media user-profile mt-2 mb-2">
 			<img
-				src="@assets/images/users/avatar-7.jpg"
+				:src="`${user.avatar.url}`"
 				class="avatar-sm rounded-circle mr-2"
 				alt="Meu Appoio"
 			/>
 			<img
-				src="@assets/images/users/avatar-7.jpg"
+				:src="`${user.avatar.url}`"
 				class="avatar-xs rounded-circle mr-2"
 				alt="Meu Appoio''"
 			/>
