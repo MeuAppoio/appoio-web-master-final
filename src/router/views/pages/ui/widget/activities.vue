@@ -20,7 +20,7 @@ export default {}
 				<img
 					src="@assets/images/users/avatar-7.jpg"
 					class="mr-3 avatar rounded-circle"
-					alt="shreyu"
+					alt="meuAppoio"
 				/>
 				<div class="media-body">
 					<h6 class="mt-0 mb-0 font-size-15 font-weight-normal">

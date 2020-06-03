@@ -6,7 +6,7 @@
           <img
             src="@assets/images/users/avatar-7.jpg"
             class="card-img"
-            alt="shreyu"
+            alt="meuAppoio"
           />
         </div>
         <div class="col-md-8">
@@ -40,12 +40,12 @@
           <img
             src="@assets/images/users/avatar-7.jpg"
             class="mr-3 avatar-lg rounded"
-            alt="shreyu"
+            alt="meuAppoio"
           />
           <div class="media-body">
             <h5 class="mt-1 mb-0">Meu Appoio N</h5>
             <h6 class="font-weight-normal mt-1 mb-1">
-              <a href>@shreyu</a>
+              <a href>@meuAppoio</a>
             </h6>
             <p class="text-muted">Designer | Creative | Thinker</p>
           </div>

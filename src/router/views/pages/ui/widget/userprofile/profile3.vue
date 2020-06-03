@@ -5,7 +5,7 @@
         <img
           src="@assets/images/users/avatar-7.jpg"
           class="avatar-lg rounded-circle mr-2"
-          alt="shreyu"
+          alt="meuAppoio"
         />
         <div class="media-body">
           <h5 class="mt-2 mb-0">Meu Appoio N</h5>

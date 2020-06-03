@@ -228,7 +228,7 @@ export default {
 					id: 3,
 				},
 				{
-					title: 'Invite Greeva to a project shreyu admin',
+					title: 'Invite Greeva to a project meuAppoio admin',
 					text: 'Due on 21 Aug, 2019',
 					id: 4,
 				},
