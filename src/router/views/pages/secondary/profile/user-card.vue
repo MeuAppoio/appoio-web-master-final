@@ -28,6 +28,7 @@ export default {
         <h5 class="mt-2 mb-0"></h5>
         <h6 class="text-muted font-weight-normal mt-2 mb-0">{{user.fullname}}</h6>
         <h6 class="text-muted font-weight-normal mt-1 mb-4">{{user.email}}</h6>
+        <h6 class="text-muted font-weight-normal mt-1 mb-4 pro-user-desc">{{user.role}}</h6>
 
         <div class="progress mb-4" style="height: 14px;">
           <div
