@@ -27,6 +27,7 @@ module.exports = {
   // https://cli.vuejs.org/guide/cli-service.html
   devServer: {
     public: 'localhost:8080',
+    disableHostCheck: true,
     ...(process.env.API_BASE_URL
       ? // Proxy API endpoints to the production base URL.
         { proxy: { '/api': { target: process.env.API_BASE_URL } } }

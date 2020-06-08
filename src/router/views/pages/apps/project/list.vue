@@ -103,6 +103,7 @@ export default {
 						<div class="col-sm-9">
 							<h4 class="search-result-item-heading"><a href="#"></a></h4>
 							<h3>{{provider.fullname}}</h3>
+							<h5>{{provider.role}}</h5>
 							<p class="header"></p>
 							<p class="description">{{ provider.about }}</p>
 						</div>
