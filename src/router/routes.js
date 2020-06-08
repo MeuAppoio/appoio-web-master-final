@@ -187,7 +187,7 @@ const emailAppsRoutes = [
 const projectAppsRoutes = [
   {
     path: '/apps/project',
-    name: 'Project',
+    name: 'Profissionais',
     icon: 'briefcase',
     meta: { authRequired: true },
     // create a container component
@@ -200,7 +200,7 @@ const projectAppsRoutes = [
     children: [
       {
         path: 'list',
-        name: 'List',
+        name: 'Procurar',
         meta: { authRequired: true },
         component: () =>
           lazyLoadView(import('@views/pages/apps/project/list')),

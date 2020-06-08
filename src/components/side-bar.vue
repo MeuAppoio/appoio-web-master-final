@@ -2,13 +2,10 @@
 import VuePerfectScrollbar from 'vue-perfect-scrollbar'
 import { authComputed } from '@state/helpers'
 import Appmenu from './app-menu'
-
-/**
- * Left sidebar component - contains mainly the application menu
- */
+import axios from 'axios'
 
 export default {
-	components: { VuePerfectScrollbar, Appmenu },
+    components: { VuePerfectScrollbar, Appmenu },
 	props: {
 		isCondensed: {
 			type: Boolean,
@@ -23,17 +20,14 @@ export default {
 			required: true,
 		},
 		width: { type: String, required: true },
-		user: {
-			type: Object,
-			required: false,
-			default: () => ({}),
-		},
+		
 	},
 	data() {
 		return {
-			settings: {
-				minScrollbarLength: 60,
-			},
+		user: [],
+		settings: {
+					minScrollbarLength: 60,
+				},
 		}
 	},
 	computed: {
@@ -84,10 +78,18 @@ export default {
 			}
 		},
 	},
+	mounted() {
+    const user = localStorage.getItem('auth.currentUser')
+    const userJSon = JSON.parse(user)
+    const user2 = userJSon.id
+    axios.get(`api/users/${user2}`).then((resposta) => {
+      const user = resposta.data
+      this.user = user
+    //   console.log(user)
+    })
+  },
 }
-
 </script>
-
 <template>
 	<!-- ========== Left Sidebar Start ========== -->
 	<div class="left-side-menu">
@@ -100,7 +102,7 @@ export default {
 			<img
 				:src="`${user.avatar.url}`"
 				class="avatar-xs rounded-circle mr-2"
-				alt="Meu Appoio''"
+				alt="Meu Appoio"
 			/>
 
 			<div class="media-body">

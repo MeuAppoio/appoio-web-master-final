@@ -2,9 +2,11 @@
 import appConfig from '@src/app.config'
 import Layout from '@layouts/main'
 
-import { projectData } from './data-list'
+import axios from 'axios'
+
 
 export default {
+	
 	page: {
 		title: 'Projects List',
 		meta: [{ name: 'description', content: appConfig.description }],
@@ -12,9 +14,53 @@ export default {
 	components: { Layout },
 	data() {
 		return {
-			projectData: projectData,
+			users:[],
+			page: 1,
+    		perPage: 9,
+    		pages: [],
 		}
 	},
+	mounted() {
+		this.listar()
+	},
+
+	methods:{
+		setPages () {
+			let numberOfPages = Math.ceil(this.users.length / this.perPage);
+			for (let index = 1; index <= numberOfPages; index++) {
+				this.pages.push(index);
+			}
+		},
+		paginate (users) {
+			let page = this.page;
+			let perPage = this.perPage;
+			let from = (page * perPage) - perPage;
+			let to = (page * perPage);
+			return  users.slice(from, to);
+		},
+		 created () {
+			this.listar();
+		},
+		watch: {
+			users () {
+			this.setPages();
+			}
+  		},
+		listar(){
+			axios.get('api/users/').then((resposta) => {
+			const json = resposta.data
+			const user = JSON.stringify(json)
+			this.users = user
+			console.log(user)
+	  })
+		},
+		salvar(){
+			axios.put('api/users',this.users).then(resposta => {
+				alert("Salvo")
+			})
+			
+		}
+	}
 }
 </script>
 
@@ -52,112 +98,29 @@ export default {
 
 		<div class="row">
 			<div
-				v-for="project in projectData"
-				:key="project.id"
-				class="col-xl-4 col-lg-6"
+				v-for=" professional in users "
+				:key="professional.id"
+				class="col-md-12 col-md-pull-8"
 			>
-				<div class="card">
-					<div class="card-body">
-						<div
-							class="badge badge-success float-right"
-							:class="{ 'badge-warning': `${project.status}` === 'Pending' }"
-							>{{ project.status }}</div
-						>
-						<p
-							class="text-success text-uppercase font-size-12 mb-2"
-							:class="{ 'text-warning': `${project.type}` === 'Android' }"
-							>{{ project.type }}</p
-						>
-						<h5 cl>
-							<a href="javascript: void(0)" class="text-dark">{{
-								project.title
-							}}</a>
-						</h5>
-						<p class="text-muted mb-4">{{ project.text }}</p>
-
-						<div>
-							<a href="javascript: void(0);">
-								<img
-									:src="`${project.images[0]}`"
-									alt
-									class="avatar-sm m-1 rounded-circle"
-								/>
-							</a>
-							<a href="javascript: void(0);">
-								<img
-									:src="`${project.images[1]}`"
-									alt
-									class="avatar-sm m-1 rounded-circle"
-								/>
-							</a>
+			<section class="search-result-item">
+				<a class="image-link" href="#"><img class="image" src="https://bootdey.com/img/Content/avatar/avatar1.png">
+				</a>
+				<div class="search-result-item-body">
+					<div class="row">
+						<div class="col-sm-9">
+							<h4 class="search-result-item-heading"><a href="#"></a></h4>
+							<p class="info">New York, NY 20188</p>
+							<p class="header"></p>
+							<p class="description">Not just usual Metro. But something bigger. Not just usual widgets, but real widgets. Not just yet another admin template, but next generation admin template.</p>
 						</div>
-					</div>
-					<div class="card-body border-top">
-						<div class="row align-items-center">
-							<div class="col-sm-auto">
-								<ul class="list-inline mb-0">
-									<li class="list-inline-item pr-2">
-										<a
-											:id="`date-tooltip-${project.id}`"
-											href="javascript: void(0)"
-											class="text-muted d-inline-block"
-										>
-											<b-tooltip
-												:target="`date-tooltip-${project.id}`"
-												triggers="hover"
-												placement="top"
-												>Due date</b-tooltip
-											>
-											<i class="uil uil-calender mr-1"></i>
-											{{ project.date }}
-										</a>
-									</li>
-									<li class="list-inline-item pr-2">
-										<a
-											:id="`task-tooltip-${project.id}`"
-											href="javascript: void(0)"
-											class="text-muted d-inline-block"
-										>
-											<b-tooltip
-												:target="`task-tooltip-${project.id}`"
-												triggers="hover"
-												placement="top"
-												>Tasks</b-tooltip
-											>
-											<i class="uil uil-bars mr-1"></i>
-											{{ project.bars }}
-										</a>
-									</li>
-									<li class="list-inline-item">
-										<a
-											:id="`comment-tooltip-${project.id}`"
-											href="javascript: void(0)"
-											class="text-muted d-inline-block"
-										>
-											<b-tooltip
-												:target="`comment-tooltip-${project.id}`"
-												triggers="hover"
-												placement="top"
-												>Comments</b-tooltip
-											>
-											<i class="uil uil-comments-alt mr-1"></i>
-											{{ project.comment }}
-										</a>
-									</li>
-								</ul>
-							</div>
-							<div class="col offset-sm-1">
-								<b-progress
-									:value="project.progress"
-									:variant="project.color"
-									height="5px"
-									class="m-0"
-								></b-progress>
-							</div>
+						<div class="col-sm-3 text-align-center">
+							<p class="value3 mt-sm">$9, 700</p>
+							<p class="fs-mini text-muted">PER WEEK</p><a class="btn btn-primary btn-info btn-sm" href="#">Learn More</a>
 						</div>
 					</div>
 				</div>
-				<!-- end card -->
+        </section><br/>
+					<!-- end card -->
 			</div>
 		</div>
 		<div class="row mb-3 mt-2">
