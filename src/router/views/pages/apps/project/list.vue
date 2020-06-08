@@ -1,5 +1,6 @@
 <script>
 import appConfig from '@src/app.config'
+import { authComputed } from '@state/helpers'
 import Layout from '@layouts/main'
 
 import axios from 'axios'
@@ -14,44 +15,35 @@ export default {
 	components: { Layout },
 	data() {
 		return {
-			users:[],
-			page: 1,
-    		perPage: 9,
-    		pages: [],
+			user:{
+				fullname:'',
+				email:'',
+				password_hash:'',
+				provider:'',
+				created_at:'',
+				updated_at:'',
+				avatar_id:'',
+				about:'',
+				telephone:'',
+				role:''
+
+			},
+			providers:[]
 		}
+	},
+	computed: {
+		...authComputed,
 	},
 	mounted() {
 		this.listar()
 	},
 
 	methods:{
-		setPages () {
-			let numberOfPages = Math.ceil(this.users.length / this.perPage);
-			for (let index = 1; index <= numberOfPages; index++) {
-				this.pages.push(index);
-			}
-		},
-		paginate (users) {
-			let page = this.page;
-			let perPage = this.perPage;
-			let from = (page * perPage) - perPage;
-			let to = (page * perPage);
-			return  users.slice(from, to);
-		},
-		 created () {
-			this.listar();
-		},
-		watch: {
-			users () {
-			this.setPages();
-			}
-  		},
 		listar(){
-			axios.get('api/users/').then((resposta) => {
-			const json = resposta.data
-			const user = JSON.stringify(json)
-			this.users = user
-			console.log(user)
+			axios.get('api/providers/').then((resposta) => {
+			const user = resposta.data
+			this.providers = user
+			console.log(this.providers)
 	  })
 		},
 		salvar(){
@@ -68,15 +60,13 @@ export default {
 	<Layout>
 		<div class="row page-title align-items-center">
 			<div class="col-md-3 col-xl-6">
-				<h4 class="mb-1 mt-0">Projects</h4>
+				<h4 class="mb-1 mt-0">Profissionais</h4>
 			</div>
 			<div class="col-md-9 col-xl-6 text-md-right">
 				<div class="mt-4 mt-md-0">
-					<button type="button" class="btn btn-danger mr-4 mb-3 mb-sm-0">
-						<i class="uil-plus mr-1"></i> Create Project
-					</button>
+					
 					<div class="btn-group mb-3 mb-sm-0">
-						<button type="button" class="btn btn-primary">All</button>
+						<button type="button" class="btn btn-primary">Todos</button>
 					</div>
 					<div class="btn-group ml-1">
 						<button type="button" class="btn btn-white">Ongoing</button>
@@ -95,33 +85,38 @@ export default {
 				</div>
 			</div>
 		</div>
-
-		<div class="row">
 			<div
-				v-for=" professional in users "
-				:key="professional.id"
+				v-for=" provider in providers "
+				:key="provider.id"
 				class="col-md-12 col-md-pull-8"
 			>
+			  <div class="row align-items-center">
+
 			<section class="search-result-item">
-				<a class="image-link" href="#"><img class="image" src="https://bootdey.com/img/Content/avatar/avatar1.png">
+				<a class="image-link" href="#">
+					<img class="image" 
+					:src="`${provider.avatar.url}`">
 				</a>
+				
 				<div class="search-result-item-body">
 					<div class="row">
 						<div class="col-sm-9">
 							<h4 class="search-result-item-heading"><a href="#"></a></h4>
-							<p class="info">New York, NY 20188</p>
+							<h3>{{provider.fullname}}</h3>
 							<p class="header"></p>
-							<p class="description">Not just usual Metro. But something bigger. Not just usual widgets, but real widgets. Not just yet another admin template, but next generation admin template.</p>
+							<p class="description">{{ provider.about }}</p>
 						</div>
 						<div class="col-sm-3 text-align-center">
-							<p class="value3 mt-sm">$9, 700</p>
-							<p class="fs-mini text-muted">PER WEEK</p><a class="btn btn-primary btn-info btn-sm" href="#">Learn More</a>
+							<p class="value3 mt-sm">R$ {{ provider.price_hour }}</p>
+							<p class="fs-mini text-muted">{{ provider.session_time }} - min</p><a class="btn btn-primary btn-info btn-sm" href="#"><feather type="camera"></feather></a>
 						</div>
 					</div>
 				</div>
-        </section><br/>
+        	</section><br/>
+			  </div>
 					<!-- end card -->
-			</div>
+		
+		
 		</div>
 		<div class="row mb-3 mt-2">
 			<div class="col-12">
