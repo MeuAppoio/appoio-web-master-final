@@ -26,7 +26,7 @@ module.exports = {
   // Configure Webpack's dev server.
   // https://cli.vuejs.org/guide/cli-service.html
   devServer: {
-    public: 'localhost:8080',
+    public: 'meuappoio.com.br:8080',
     disableHostCheck: true,
     ...(process.env.API_BASE_URL
       ? // Proxy API endpoints to the production base URL.
