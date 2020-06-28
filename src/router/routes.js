@@ -186,7 +186,7 @@ const emailAppsRoutes = [
 
 const projectAppsRoutes = [
   {
-    path: '/apps/project',
+    path: '/apps/professionals',
     name: 'Profissionais',
     icon: 'briefcase',
     meta: { authRequired: true },
@@ -203,15 +203,15 @@ const projectAppsRoutes = [
         name: 'Procurar',
         meta: { authRequired: true },
         component: () =>
-          lazyLoadView(import('@views/pages/apps/project/list')),
+          lazyLoadView(import('@views/pages/apps/professionals/list')),
       },
-      {
-        path: 'detail',
-        name: 'Detail',
-        meta: { authRequired: true },
-        component: () =>
-          lazyLoadView(import('@views/pages/apps/project/detail')),
-      },
+      // {
+      //   path: 'detail',
+      //   name: 'Detail',
+      //   meta: { authRequired: true },
+      //   component: () =>
+      //     lazyLoadView(import('@views/pages/apps/project/detail')),
+      // },
     ],
   }
 ];
@@ -249,10 +249,10 @@ const taskAppsRoutes = [
 ];
 
 const appsRoutes = [
-  ...calendarAppsRoutes,
-  ...emailAppsRoutes,
+  // ...calendarAppsRoutes,
+  // ...emailAppsRoutes,
   ...projectAppsRoutes,
-  ...taskAppsRoutes
+  // ...taskAppsRoutes
 ]
 
 // pages
@@ -448,11 +448,11 @@ const chartsRoutes = [
 const authProtectedRoutes = [
   ...dashboardRoutes,
   ...appsRoutes,
-  ...pagesRoutes,
-  ...uiRoutes,
-  ...formsRoutes,
-  ...chartsRoutes,
-  ...tablesRoutes
+  // ...pagesRoutes,
+  // ...uiRoutes,
+  // ...formsRoutes,
+  // ...chartsRoutes,
+  // ...tablesRoutes
 ]
 const allRoutes = [...authRoutes, ...authProtectedRoutes, ...errorPagesRoutes]
 

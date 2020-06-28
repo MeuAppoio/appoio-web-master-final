@@ -41,11 +41,10 @@ export default {
 			<!-- LOGO -->
 			<a href="/" class="navbar-brand mr-0 mr-md-2 logo">
 				<span class="logo-lg">
-					<img src="@assets/images/logo.png" alt height="24" />
-					<span class="d-inline h5 ml-2 text-logo">Meu Appoio</span>
+					<img src="@assets/images/logo-horizontal.png" alt height="50" />
 				</span>
 				<span class="logo-sm">
-					<img src="@assets/images/logo.png" alt height="24" />
+					<img src="@assets/images/logo-horizontal.png" alt height="50" />
 				</span>
 			</a>
 
