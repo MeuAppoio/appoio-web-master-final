@@ -116,21 +116,21 @@ const errorPagesRoutes = [
 ]
 
 // dashboard
-const dashboardRoutes = [
-  {
-    path: '/',
-    name: 'Dashboard',
-    header: 'Navigation',
-    icon: 'home',
-    badge: {
-      text: '1',
-      varient: 'success',
-    },
-    component: () => lazyLoadView(import('@views/pages/dashboard/dashboard')),
-    meta: { authRequired: true },
-    props: (route) => ({ user: store.state.auth.currentUser || {} }),
-  },
-]
+// const dashboardRoutes = [
+//   {
+//     path: '/',
+//     name: 'Dashboard',
+//     header: 'Navegação',
+//     icon: 'home',
+//     badge: {
+//       text: '1',
+//       varient: 'success',
+//     },
+//     component: () => lazyLoadView(import('@views/pages/dashboard/dashboard')),
+//     meta: { authRequired: true },
+//     props: (route) => ({ user: store.state.auth.currentUser || {} }),
+//   },
+// ]
 
 // apps
 const calendarAppsRoutes = [
@@ -186,33 +186,14 @@ const emailAppsRoutes = [
 
 const projectAppsRoutes = [
   {
-    path: '/apps/professionals',
+    path: '/',
     name: 'Profissionais',
+    header: 'Navegação',
     icon: 'briefcase',
+    component: () => lazyLoadView(import('@views/pages/apps/professionals/list')),
     meta: { authRequired: true },
-    // create a container component
-    component: {
-      render(c) {
-        return c('router-view')
-      },
-    },
     props: (route) => ({ user: store.state.auth.currentUser || {} }),
-    children: [
-      {
-        path: 'list',
-        name: 'Procurar',
-        meta: { authRequired: true },
-        component: () =>
-          lazyLoadView(import('@views/pages/apps/professionals/list')),
-      },
-      // {
-      //   path: 'detail',
-      //   name: 'Detail',
-      //   meta: { authRequired: true },
-      //   component: () =>
-      //     lazyLoadView(import('@views/pages/apps/project/detail')),
-      // },
-    ],
+    
   }
 ];
 
@@ -259,9 +240,9 @@ const appsRoutes = [
 const pagesRoutes = [
   {
     path: '/pages',
-    name: 'Pages',
+    name: 'Cadastro',
     icon: 'file-text',
-    header: 'Custom',
+    header: 'Configurações',
     meta: { authRequired: true },
     // create a container component
     component: {
@@ -270,32 +251,32 @@ const pagesRoutes = [
       },
     },
     children: [
-      {
-        path: 'starter',
-        name: 'Starter',
-        component: () => lazyLoadView(import('@views/pages/secondary/starter')),
-      },
-      {
-        path: 'invoice',
-        name: 'Invoice',
-        component: () => lazyLoadView(import('@views/pages/secondary/invoice')),
-      },
+      // {
+      //   path: 'starter',
+      //   name: 'Starter',
+      //   component: () => lazyLoadView(import('@views/pages/secondary/starter')),
+      // },
+      // {
+      //   path: 'invoice',
+      //   name: 'Invoice',
+      //   component: () => lazyLoadView(import('@views/pages/secondary/invoice')),
+      // },
       {
         path: 'profile',
-        name: 'Profile',
+        name: 'Meu Perfil',
         component: () => lazyLoadView(import('@views/pages/secondary/profile/')),
       },
-      {
-        path: 'activity',
-        name: 'Activity',
-        component: () =>
-          lazyLoadView(import('@views/pages/secondary/activity')),
-      },
-      {
-        path: 'pricing',
-        name: 'Pricing',
-        component: () => lazyLoadView(import('@views/pages/secondary/pricing')),
-      },
+      // {
+      //   path: 'activity',
+      //   name: 'Activity',
+      //   component: () =>
+      //     lazyLoadView(import('@views/pages/secondary/activity')),
+      // },
+      // {
+      //   path: 'pricing',
+      //   name: 'Pricing',
+      //   component: () => lazyLoadView(import('@views/pages/secondary/pricing')),
+      // },
     ],
   },
 ]
@@ -446,9 +427,9 @@ const chartsRoutes = [
 
 
 const authProtectedRoutes = [
-  ...dashboardRoutes,
+  // ...dashboardRoutes,
   ...appsRoutes,
-  // ...pagesRoutes,
+  ...pagesRoutes,
   // ...uiRoutes,
   // ...formsRoutes,
   // ...chartsRoutes,
