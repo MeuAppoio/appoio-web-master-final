@@ -10,7 +10,6 @@ export default {
           const user = resposta.data
           this.user = user
         })
-        console.log(user)
         return user
       },
     // show:(user) => {

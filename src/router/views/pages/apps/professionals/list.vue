@@ -43,7 +43,6 @@ export default {
 			axios.get('api/providers/').then((resposta) => {
 			const user = resposta.data
 			this.providers = user
-			console.log(this.providers)
 	  })
 		},
 		salvar(){

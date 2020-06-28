@@ -10,7 +10,6 @@ export default {
     axios.get(`api/users/${user2}`).then((resposta) => {
       const user = resposta.data
       this.user = user
-      console.log(user)
     })
   },
   data() {
