@@ -63,7 +63,8 @@ export default {
     const user2 = userJSon.id
     axios.get(`api/users/${user2}`).then((resposta) => {
       const user = resposta.data
-      this.user = user
+	  this.user = user
+	  console.log(user)
 	})
 	},
 
@@ -73,6 +74,10 @@ export default {
 				alert("Salvo")
 			})
 			
+		},
+		formatPrice(value) {
+			let val = (value/1).toFixed(2).replace('.', ',')
+			return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
 		}
 	}
   }
@@ -113,9 +118,15 @@ export default {
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-lg-3 control-label">Função:</label>
+						<label class="col-lg-3 control-label">Especialidade:</label>
 						<div class="col-lg-8">
 						<input class="form-control" type="text" value="" v-model="user.role">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-lg-3 control-label">Valor Hora:</label>
+						<div class="col-lg-8">
+						<input class="form-control"  min="0.00" max="10000.00" step="0.01" type="number" v-model="user.price_hour">
 						</div>
 					</div>
 					<div class="form-group">
