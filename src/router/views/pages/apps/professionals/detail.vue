@@ -587,7 +587,7 @@ export default {
             <div class="text-center">
               <a href="javascript:void(0);" class="btn btn-sm border btn-white">
                 <feather type="loader" class="icon-dual icon-xs mr-2"></feather
-                >Load more
+                >Carregar mais
               </a>
             </div>
           </div>

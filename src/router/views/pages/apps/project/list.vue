@@ -89,32 +89,31 @@ export default {
 				:key="provider.id"
 				class="col-md-12 col-md-pull-8"
 			>
-			  <div class="row align-items-center">
+			<div class="row align-items-center">
 
-			<section class="search-result-item">
-				<a class="image-link" href="#">
-					<img class="image" 
-					:src="`${provider.avatar.url}`">
-				</a>
-				
-				<div class="search-result-item-body">
-					<div class="row">
-						<div class="col-sm-9">
-							<h4 class="search-result-item-heading"><a href="#"></a></h4>
-							<h3>{{provider.fullname}}</h3>
-							<h5>{{provider.role}}</h5>
-							<p class="header"></p>
-							<p class="description">{{ provider.about }}</p>
-						</div>
-						<div class="col-sm-3 text-align-center">
-							<p class="value3 mt-sm">R$ {{ provider.price_hour }}</p>
-							<p class="fs-mini text-muted">{{ provider.session_time }} - min</p><a class="btn btn-primary btn-info btn-sm" href="#"><feather type="camera"></feather></a>
+				<section class="search-result-item">
+					<a class="image-link" href="#">
+						<img class="image" 
+						:src="`${provider.avatar.url}`">
+					</a>
+					
+					<div class="search-result-item-body">
+						<div class="row">
+							<div class="col-sm-9">
+								<h4 class="search-result-item-heading"><a href="#"></a></h4>
+								<h3>{{provider.fullname}}</h3>
+								<h5>{{provider.role}}</h5>
+								<p class="header"></p>
+								<p class="description">{{ provider.about }}</p>
+							</div>
+							<div class="col-sm-3 text-align-center">
+								<p class="value3 mt-sm">R$ {{ provider.price_hour }}</p>
+								<p class="fs-mini text-muted">{{ provider.session_time }} - min</p><a class="btn btn-primary btn-info btn-sm" href="#"><feather type="camera"></feather></a>
+							</div>
 						</div>
 					</div>
-				</div>
-        	</section><br/>
-			  </div>
-					<!-- end card -->
+				</section><br/>	
+			</div>
 		
 		
 		</div>
@@ -126,7 +125,7 @@ export default {
 							type="loader"
 							class="icon-dual icon-xs mr-2 align-middle"
 						></feather
-						>Load more
+						>Carregar mais
 					</a>
 				</div>
 			</div>

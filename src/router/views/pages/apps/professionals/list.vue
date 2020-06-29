@@ -108,7 +108,7 @@ export default {
 						</div>
 						<div class="col-sm-3 text-align-center">
 							<p class="value3 mt-sm">R$ {{ provider.price_hour }}</p>
-							<p class="fs-mini text-muted">{{ provider.session_time }} - min</p><a class="btn btn-primary btn-info btn-sm" href="#"><feather type="camera"></feather></a>
+							<p class="fs-mini text-muted">{{ provider.session_time }} - min</p><a class="btn btn-primary btn-info btn-sm" :href="'https://chat.meuappoio.com.br/?profissional='+`${provider.fullname}`" target="_blank"><feather type="camera"></feather></a>
 						</div>
 					</div>
 				</div>
@@ -126,7 +126,7 @@ export default {
 							type="loader"
 							class="icon-dual icon-xs mr-2 align-middle"
 						></feather
-						>Load more
+						>Carregar mais
 					</a>
 				</div>
 			</div>
